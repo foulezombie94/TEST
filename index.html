@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VendMoi - Télécharger l'Application Android (APK Officiel)</title>
+  
+  <meta name="title" content="VendMoi - Télécharger l'Application Android (APK Officiel)">
+  <meta name="description" content="Téléchargez l'application officielle VendMoi pour Android. Scannez vos articles, estimez leur valeur et vendez plus vite grâce à l'IA.">
+  <meta name="theme-color" content="#4938FF">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VendMoi - Télécharger l'Application Android (APK Officiel)">
+  <meta property="og:description" content="Scannez, estimez et vendez vos articles avec l'IA. Téléchargez l'APK officiel VendMoi dès maintenant.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%234938FF'/><path d='M30 45 L50 25 L70 45 L60 45 L60 75 L40 75 L40 45 Z' fill='white'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: {
+            brand: {
+              50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc',
+              400: '#818cf8', 500: '#4938FF', 600: '#402ee6', 700: '#3424ba',
+              800: '#2c1e96', 900: '#23187a', 950: '#140c4a'
+            }
+          },
+          animation: {
+            'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 5s ease-in-out infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0A0D14; color: #F3F4F6; overflow-x: hidden; }
+    .glow-effect { position: absolute; border-radius: 50%; filter: blur(120px); pointer-events: none; opacity: 0.45; }
+    .glass-card { background: rgba(18, 24, 38, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .glass-card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .glass-card-hover:hover { background: rgba(28, 36, 56, 0.85); border-color: rgba(73, 56, 255, 0.4); transform: translateY(-4px); box-shadow: 0 20px 40px -15px rgba(73, 56, 255, 0.25); }
+    .btn-gradient { background: linear-gradient(135deg, #4938FF 0%, #7928CA 100%); box-shadow: 0 10px 25px -5px rgba(73, 56, 255, 0.5); transition: all 0.25s ease; }
+    .btn-gradient:hover { background: linear-gradient(135deg, #5b4cff 0%, #8b38e0 100%); box-shadow: 0 15px 35px -5px rgba(73, 56, 255, 0.7); transform: translateY(-2px); }
+    .gradient-text { background: linear-gradient(135deg, #FFFFFF 20%, #A5B4FC 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .gradient-brand-text { background: linear-gradient(135deg, #818CF8 0%, #C084FC 50%, #F472B6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="min-h-screen relative selection:bg-brand-500 selection:text-white">
+
+  <!-- Ambient Glow -->
+  <div class="glow-effect w-[500px] h-[500px] bg-brand-600 top-[-100px] left-[-150px]"></div>
+  <div class="glow-effect w-[600px] h-[600px] bg-purple-600 top-[20%] right-[-200px]"></div>
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 glass-card border-b border-white/5 px-4 lg:px-8 py-3.5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center shadow-lg shadow-brand-500/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="sparkles" class="w-5 h-5 text-white"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold tracking-tight text-white flex items-center gap-1.5">
+            VendMoi <span class="text-[10px] uppercase font-bold tracking-widest bg-brand-500/20 text-brand-300 px-2 py-0.5 rounded-full border border-brand-500/30">APK</span>
+          </span>
+          <span class="text-xs text-gray-400 font-medium">Smart AI Selling</span>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <a href="#features" class="hover:text-white transition-colors">Fonctionnalités</a>
+        <a href="#installation" class="hover:text-white transition-colors">Installation</a>
+        <a href="#specs" class="hover:text-white transition-colors">Fiche Technique</a>
+        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button onclick="openQrModal()" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold text-gray-300 glass-card hover:text-white border border-white/10 transition-all">
+          <i data-lucide="qr-code" class="w-4 h-4 text-brand-400"></i>
+          <span>QR Code</span>
+        </button>
+
+        <a href="vendmoi.apk" download="VendMoi-v1.0.0.apk" onclick="triggerDownloadFeedback()" class="btn-gradient inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold text-white shadow-lg shadow-brand-500/25">
+          <i data-lucide="download" class="w-4 h-4 animate-bounce"></i>
+          <span>Installer l'APK</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 px-4 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border border-brand-500/30 text-xs font-medium text-brand-300 animate-pulse-subtle">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>Version 1.0.0 officielle disponible</span>
+          <span class="text-white/40">•</span>
+          <span class="text-gray-300">Android</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+          <span class="gradient-text">Vendez vos articles en</span><br>
+          <span class="gradient-brand-text">un clin d'œil avec l'IA</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-gray-400 max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
+          Scannez vos objets avec votre smartphone, laissez l'IA estimer le prix et rédiger l'annonce parfaite en quelques secondes.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <a href="vendmoi.apk" download="VendMoi-v1.0.0.apk" onclick="triggerDownloadFeedback()" class="w-full sm:w-auto btn-gradient flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-base font-bold text-white shadow-xl shadow-brand-500/30 group">
+            <i data-lucide="download" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+            <div class="text-left">
+              <div class="text-xs uppercase tracking-wider text-brand-200 font-semibold">Téléchargement direct</div>
+              <div class="text-lg leading-tight font-extrabold">Télécharger VendMoi APK</div>
+            </div>
+            <span class="ml-2 bg-white/20 text-white text-xs px-2.5 py-1 rounded-lg font-bold">110 Mo</span>
+          </a>
+
+          <button onclick="openQrModal()" class="w-full sm:w-auto glass-card flex items-center justify-center gap-2 px-6 py-4 rounded-2xl text-sm font-semibold text-gray-200 hover:text-white border border-white/10 hover:border-brand-500/50 transition-all">
+            <i data-lucide="qr-code" class="w-5 h-5 text-brand-400"></i>
+            <span>Scanner sur Mobile</span>
+          </button>
+        </div>
+
+        <div class="pt-6 border-t border-white/5 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-gray-400">
+          <div class="flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+            <span>Fichier 100% Sécurisé & Vérifié</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="smartphone" class="w-4 h-4 text-brand-400"></i>
+            <span>Android 8.0+</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i>
+            <span>Installation instantanée</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone Mockup Preview -->
+      <div class="lg:col-span-5 flex justify-center relative">
+        <div class="relative w-full max-w-[320px] animate-float">
+          <div class="relative bg-slate-900 border-4 border-slate-700/80 rounded-[44px] p-3 shadow-2xl shadow-brand-500/20 ring-1 ring-white/20">
+            
+            <div class="absolute top-6 left-1/2 -translate-x-1/2 w-28 h-5 bg-black rounded-full z-20 flex items-center justify-center">
+              <div class="w-2.5 h-2.5 rounded-full bg-slate-800 border border-slate-700"></div>
+            </div>
+
+            <div class="relative bg-gradient-to-b from-slate-950 via-slate-900 to-indigo-950/60 rounded-[34px] overflow-hidden p-5 pt-12 text-white border border-white/5 space-y-4">
+              
+              <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                  <div class="w-7 h-7 rounded-lg bg-brand-500 flex items-center justify-center">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-white"></i>
+                  </div>
+                  <span class="font-bold text-sm">VendMoi AI</span>
+                </div>
+                <span class="text-[10px] bg-emerald-500/20 text-emerald-300 font-bold px-2 py-0.5 rounded-full">v1.0.0</span>
+              </div>
+
+              <div class="relative rounded-2xl bg-slate-800/80 border border-white/10 p-4 overflow-hidden aspect-[4/3] flex flex-col items-center justify-center text-center">
+                <div class="absolute inset-4 border-2 border-dashed border-brand-400/60 rounded-xl animate-pulse"></div>
+                <i data-lucide="camera" class="w-8 h-8 text-brand-300 mb-2"></i>
+                <span class="text-xs font-semibold text-gray-200">Scanner intelligent actif</span>
+                <span class="text-[10px] text-gray-400">Reconnaissance instantanée...</span>
+                <div class="mt-2 text-[9px] bg-brand-500/30 text-brand-200 font-mono px-2 py-0.5 rounded border border-brand-500/40">
+                  Précision IA: 99.4%
+                </div>
+              </div>
+
+              <div class="glass-card rounded-2xl p-3.5 border border-white/10 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-white">Analyse terminée</span>
+                  <span class="text-[10px] text-emerald-400 font-bold">Estimation: 85€ - 95€</span>
+                </div>
+                <p class="text-[11px] text-gray-300 leading-snug">
+                  "Sneakers Nike Air Max - Excellent état, boîte d'origine incluse."
+                </p>
+                <div class="flex gap-1.5 pt-1">
+                  <span class="text-[9px] bg-brand-500/30 text-brand-300 px-2 py-0.5 rounded">Prêt à publier</span>
+                </div>
+              </div>
+
+              <a href="vendmoi.apk" download="VendMoi-v1.0.0.apk" onclick="triggerDownloadFeedback()" class="w-full btn-gradient py-3 rounded-xl flex items-center justify-center gap-2 text-xs font-bold text-white shadow-md">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                <span>Installer sur mon appareil</span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20 px-4 max-w-7xl mx-auto border-t border-white/5">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <h2 class="text-xs uppercase font-bold tracking-widest text-brand-400">Fonctionnalités Clés</h2>
+      <p class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+        Une suite complète pour vendre 10x plus vite
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="glass-card glass-card-hover rounded-3xl p-8 space-y-4">
+        <div class="w-14 h-14 rounded-2xl bg-brand-500/20 border border-brand-500/30 flex items-center justify-center text-brand-400">
+          <i data-lucide="scan-line" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white">Scanner d'objets IA</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Prenez une photo de votre article. Notre IA identifie la catégorie, la marque et l'état d'usure en un instant.
+        </p>
+      </div>
+
+      <div class="glass-card glass-card-hover rounded-3xl p-8 space-y-4">
+        <div class="w-14 h-14 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400">
+          <i data-lucide="sparkles" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white">Rédaction automatique</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          L'application génère un titre accrocheur, une description complète et suggère le meilleur prix de vente.
+        </p>
+      </div>
+
+      <div class="glass-card glass-card-hover rounded-3xl p-8 space-y-4">
+        <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+          <i data-lucide="shield-check" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white">Sécurisé & Rapide</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Vos données restent strictement confidentielles avec protection biométrique Face ID / Empreinte digitale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Guide -->
+  <section id="installation" class="py-20 px-4 max-w-7xl mx-auto border-t border-white/5">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <h2 class="text-xs uppercase font-bold tracking-widest text-emerald-400">Tutoriel d'installation</h2>
+      <p class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+        Comment installer l'APK sur Android ?
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="glass-card rounded-3xl p-8 border border-white/10 relative overflow-hidden">
+        <div class="text-5xl font-extrabold text-white/10 absolute top-4 right-6 font-mono">01</div>
+        <div class="w-12 h-12 rounded-2xl bg-brand-500/20 flex items-center justify-center text-brand-400 mb-6 font-bold text-lg">
+          <i data-lucide="download" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">1. Télécharger</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+          Cliquez sur le bouton de téléchargement. Si Chrome affiche un avertissement de sécurité, cliquez sur <strong class="text-white">"Télécharger quand même"</strong>.
+        </p>
+      </div>
+
+      <div class="glass-card rounded-3xl p-8 border border-white/10 relative overflow-hidden">
+        <div class="text-5xl font-extrabold text-white/10 absolute top-4 right-6 font-mono">02</div>
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 flex items-center justify-center text-amber-400 mb-6 font-bold text-lg">
+          <i data-lucide="settings" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">2. Autoriser la source</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+          Ouvrez le fichier téléchargé. Si demandé, activez l'option <strong class="text-white">"Autoriser depuis cette source"</strong> dans les paramètres.
+        </p>
+      </div>
+
+      <div class="glass-card rounded-3xl p-8 border border-white/10 relative overflow-hidden">
+        <div class="text-5xl font-extrabold text-white/10 absolute top-4 right-6 font-mono">03</div>
+        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6 font-bold text-lg">
+          <i data-lucide="play" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">3. Installer & Lancer</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+          Appuyez sur <strong class="text-white">"Installer"</strong>, puis ouvrez VendMoi pour démarrer !
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="vendmoi.apk" download="VendMoi-v1.0.0.apk" onclick="triggerDownloadFeedback()" class="btn-gradient inline-flex items-center gap-3 px-8 py-4 rounded-2xl text-base font-bold text-white shadow-xl shadow-brand-500/25">
+        <i data-lucide="download" class="w-5 h-5"></i>
+        <span>Télécharger l'APK maintenant (110 Mo)</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Specs -->
+  <section id="specs" class="py-20 px-4 max-w-5xl mx-auto border-t border-white/5">
+    <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+      <h2 class="text-xs uppercase font-bold tracking-widest text-brand-400">Fiche Technique</h2>
+      <p class="text-3xl font-extrabold tracking-tight text-white">Spécifications du package APK</p>
+    </div>
+
+    <div class="glass-card rounded-3xl overflow-hidden border border-white/10 divide-y divide-white/5">
+      <div class="grid grid-cols-1 sm:grid-cols-3 p-5"><div class="text-sm font-semibold text-gray-400">Nom</div><div class="sm:col-span-2 text-sm font-bold text-white">VendMoi (v1.0.0)</div></div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 p-5"><div class="text-sm font-semibold text-gray-400">Package ID</div><div class="sm:col-span-2 text-sm font-mono text-gray-200">com.vendmoi.app</div></div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 p-5"><div class="text-sm font-semibold text-gray-400">Taille</div><div class="sm:col-span-2 text-sm font-mono text-gray-200">109.85 Mo</div></div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 p-5"><div class="text-sm font-semibold text-gray-400">Compatibilité</div><div class="sm:col-span-2 text-sm text-gray-200">Android 8.0 et supérieur</div></div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 p-5"><div class="text-sm font-semibold text-gray-400">Date</div><div class="sm:col-span-2 text-sm text-emerald-400 font-semibold">25 Août 2026</div></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 px-4 max-w-4xl mx-auto border-t border-white/5">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <h2 class="text-xs uppercase font-bold tracking-widest text-brand-400">FAQ</h2>
+      <p class="text-3xl font-extrabold tracking-tight text-white">Questions Fréquentes</p>
+    </div>
+
+    <div class="space-y-4">
+      <details class="glass-card rounded-2xl p-6 border border-white/10 group cursor-pointer">
+        <summary class="flex items-center justify-between text-base font-bold text-white list-none">
+          <span>Pourquoi installer l'APK directement ?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-4 text-sm text-gray-300 leading-relaxed">
+          Le format APK permet de profiter immédiatement de la toute dernière version sans attendre les délais des stores.
+        </p>
+      </details>
+
+      <details class="glass-card rounded-2xl p-6 border border-white/10 group cursor-pointer">
+        <summary class="flex items-center justify-between text-base font-bold text-white list-none">
+          <span>L'application est-elle gratuite ?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-4 text-sm text-gray-300 leading-relaxed">
+          Oui, le téléchargement et l'utilisation de l'application VendMoi sont 100% gratuits.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Mobile Floating CTA -->
+  <div class="fixed bottom-0 left-0 right-0 p-4 bg-slate-950/90 backdrop-blur-xl border-t border-white/10 z-40 sm:hidden flex items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <div class="w-9 h-9 rounded-xl bg-brand-500 flex items-center justify-center shadow-md">
+        <i data-lucide="sparkles" class="w-5 h-5 text-white"></i>
+      </div>
+      <div>
+        <div class="text-xs font-bold text-white">VendMoi APK</div>
+        <div class="text-[10px] text-emerald-400 font-semibold">v1.0.0 (110 Mo)</div>
+      </div>
+    </div>
+    <a href="vendmoi.apk" download="VendMoi-v1.0.0.apk" onclick="triggerDownloadFeedback()" class="btn-gradient px-4 py-2.5 rounded-xl text-xs font-bold text-white flex items-center gap-1.5 shadow-lg">
+      <i data-lucide="download" class="w-4 h-4"></i>
+      <span>Installer</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-12 px-4 text-center text-xs text-gray-400">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-lg bg-brand-500 flex items-center justify-center">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-white"></i>
+        </div>
+        <span class="font-bold text-white">VendMoi</span>
+        <span>© 2026 Tous droits réservés.</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/foulezombie94/TEST" target="_blank" class="hover:text-white transition-colors flex items-center gap-1">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>GitHub Repository</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QR Code Modal -->
+  <div id="qrModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="glass-card border border-white/15 rounded-3xl max-w-sm w-full p-6 text-center space-y-5 relative animate-in fade-in zoom-in duration-200">
+      <button onclick="closeQrModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="w-12 h-12 rounded-2xl bg-brand-500/20 text-brand-400 flex items-center justify-center mx-auto">
+        <i data-lucide="qr-code" class="w-6 h-6"></i>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-white">Scanner sur votre mobile</h3>
+        <p class="text-xs text-gray-400 mt-1">Pointez l'appareil photo pour télécharger l'APK directement sur votre smartphone.</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-2xl inline-block shadow-xl mx-auto" id="qrcode-container"></div>
+
+      <button onclick="closeQrModal()" class="w-full py-2.5 rounded-xl bg-white/10 text-white text-xs font-semibold hover:bg-white/20 transition-colors">
+        Fermer
+      </button>
+    </div>
+  </div>
+
+  <!-- Download Toast -->
+  <div id="downloadToast" class="fixed top-6 right-6 z-50 glass-card border border-emerald-500/40 rounded-2xl p-4 shadow-2xl max-w-md hidden translate-y-[-20px] opacity-0 transition-all duration-300">
+    <div class="flex items-start gap-3">
+      <div class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+        <i data-lucide="check-circle-2" class="w-5 h-5 animate-pulse"></i>
+      </div>
+      <div class="space-y-1">
+        <div class="text-sm font-bold text-white">Téléchargement lancé !</div>
+        <p class="text-xs text-gray-300 leading-relaxed">
+          Le fichier <span class="font-mono text-emerald-300">VendMoi-v1.0.0.apk</span> est en cours de téléchargement. Suivez les étapes ci-dessous pour l'installer.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function generateQrCode() {
+      const container = document.getElementById('qrcode-container');
+      container.innerHTML = '';
+      const downloadUrl = window.location.origin + window.location.pathname.replace(//[^/]*$/, '/') + 'vendmoi.apk';
+      new QRCode(container, {
+        text: downloadUrl,
+        width: 180,
+        height: 180,
+        colorDark : '#0A0D14',
+        colorLight : '#ffffff',
+        correctLevel : QRCode.CorrectLevel.H
+      });
+    }
+
+    function openQrModal() {
+      generateQrCode();
+      document.getElementById('qrModal').classList.remove('hidden');
+    }
+
+    function closeQrModal() {
+      document.getElementById('qrModal').classList.add('hidden');
+    }
+
+    function triggerDownloadFeedback() {
+      const toast = document.getElementById('downloadToast');
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-[-20px]', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+      }, 10);
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-[-20px]', 'opacity-0');
+        setTimeout(() => toast.classList.add('hidden'), 300);
+      }, 7000);
+    }
+  </script>
+</body>
+</html>

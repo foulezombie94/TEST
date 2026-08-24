@@ -1,0 +1,9 @@
+{
+  "name": "vendmoi-apk-site",
+  "version": "1.0.0",
+  "description": "Site de telechargement direct pour APK VendMoi",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
